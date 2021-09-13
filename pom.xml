@@ -1,12 +1,12 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>javax.inject</groupId>
-  <artifactId>javax.inject</artifactId>
+    <groupId>au.com.growthops</groupId>
+  <artifactId>javax.inject2</artifactId>
     <packaging>jar</packaging>
   <name>javax.inject</name>
   <version>1</version>
-  <description>The javax.inject API</description>
-    <url>http://code.google.com/p/atinject/</url>
+  <description>The javax.inject API - with 2 on the end of every class</description>
+    <url>https://github.com/growthops-digital/javax-inject-2</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -14,11 +14,6 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    <scm>
-        <connection>scm:svn:http://atinject.googlecode.com/svn/trunk</connection>
-        <developerConnection>scm:svn:https://atinject.googlecode.com/svn/trunk</developerConnection>
-        <url>http://code.google.com/p/atinject/source/checkout</url>
-    </scm>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -71,22 +66,13 @@
         <developer>
             <id>various</id>
             <name>Various</name>
-            <email>atinject-observer@googlegroups.com</email>
-            <url>http://groups.google.com/group/atinject-observer?pli=1</url>
+            <email>matthew.potter@growthops.com.au</email>
             <roles>
                 <role>developer</role>
             </roles>
-            <timezone>-8</timezone>
+            <timezone>+10</timezone>
         </developer>
     </developers>
-    <distributionManagement>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-
     <profiles>
         <profile>
             <id>release-sign-artifacts</id>

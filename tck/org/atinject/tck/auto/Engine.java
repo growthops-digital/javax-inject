@@ -18,8 +18,8 @@ package org.atinject.tck.auto;
 
 import org.atinject.tck.auto.accessories.SpareTire;
 
-import javax.inject.Inject;
-import javax.inject.Named;
+import javax.inject.Inject2;
+import javax.inject.Named2;
 
 public abstract class Engine {
 
@@ -40,16 +40,19 @@ public abstract class Engine {
     public boolean overriddenPackagePrivateMethodInjectedTwice;
     public boolean qualifiersInheritedFromOverriddenMethod;
 
-    @Inject void injectPackagePrivateMethod() {
+    @Inject2
+    void injectPackagePrivateMethod() {
         superPackagePrivateMethodInjected = true;
     }
 
-    @Inject void injectPackagePrivateMethodForOverride() {
+    @Inject2
+    void injectPackagePrivateMethodForOverride() {
         superPackagePrivateMethodForOverrideInjected = true;
     }
 
-    @Inject public void injectQualifiers(@Drivers Seat seatA, Seat seatB,
-            @Named("spare") Tire tireA, Tire tireB) {
+    @Inject2
+    public void injectQualifiers(@Drivers Seat seatA, Seat seatB,
+                                 @Named2("spare") Tire tireA, Tire tireB) {
         if (!(seatA instanceof DriversSeat)
                 || (seatB instanceof DriversSeat)
                 || !(tireA instanceof SpareTire)
@@ -58,11 +61,13 @@ public abstract class Engine {
         }
     }
 
-    @Inject public void injectTwiceOverriddenWithOmissionInMiddle() {
+    @Inject2
+    public void injectTwiceOverriddenWithOmissionInMiddle() {
         overriddenTwiceWithOmissionInMiddleInjected = true;
     }
 
-    @Inject public void injectTwiceOverriddenWithOmissionInSubclass() {
+    @Inject2
+    public void injectTwiceOverriddenWithOmissionInSubclass() {
         overriddenTwiceWithOmissionInSubclassInjected = true;
     }
 }

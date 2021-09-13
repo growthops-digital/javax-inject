@@ -21,7 +21,7 @@ import java.lang.annotation.Documented;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * String-based {@linkplain Qualifier qualifier}.
+ * String-based {@linkplain Qualifier2 qualifier}.
  *
  * <p>Example usage:
  *
@@ -32,10 +32,10 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  *     ...
  *   }</pre>
  */
-@Qualifier
+@Qualifier2
 @Documented
 @Retention(RUNTIME)
-public @interface Named {
+public @interface Named2 {
 
     /** The name. */
     String value() default "";
