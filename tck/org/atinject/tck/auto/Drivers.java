@@ -16,10 +16,10 @@
 
 package org.atinject.tck.auto;
 
-import javax.inject.Qualifier;
+import javax.inject.Qualifier2;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-@Retention(RetentionPolicy.RUNTIME) @Qualifier
+@Retention(RetentionPolicy.RUNTIME) @Qualifier2
 public @interface Drivers {
 }

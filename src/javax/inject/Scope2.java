@@ -41,7 +41,7 @@ import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
  *   class Log {
  *     void log(String message) { ... }
  *   }</pre>
- * 
+ *
  * <p>The injector generates an error if it encounters more than one scope
  * annotation on the same class or a scope annotation it doesn't support.
  *
@@ -53,7 +53,7 @@ import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
  *   <li>is typically not {@code @Inherited}, so scoping is orthogonal to
  *      implementation inheritance.</li>
  *   <li>may have restricted usage if annotated with {@code @Target}. While
- *      this specification covers applying scopes to classes only, some 
+ *      this specification covers applying scopes to classes only, some
  *      injector configurations might use scope annotations
  *      in other places (on factory method results for example).</li>
  * </ul>
@@ -71,9 +71,9 @@ import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
  * forgot to configure the scope in the injector. A conservative injector
  * would generate an error rather than not apply a scope.
  *
- * @see javax.inject.Singleton @Singleton
+ * @see Singleton2 @Singleton
  */
 @Target(ANNOTATION_TYPE)
 @Retention(RUNTIME)
 @Documented
-public @interface Scope {}
+public @interface Scope2 {}

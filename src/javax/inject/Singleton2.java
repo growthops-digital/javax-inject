@@ -23,9 +23,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 /**
  * Identifies a type that the injector only instantiates once. Not inherited.
  *
- * @see javax.inject.Scope @Scope
+ * @see Scope2 @Scope
  */
-@Scope
+@Scope2
 @Documented
 @Retention(RUNTIME)
-public @interface Singleton {}
+public @interface Singleton2 {}
